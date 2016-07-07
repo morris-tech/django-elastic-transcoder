@@ -1,5 +1,7 @@
-from django.conf.urls import url, patterns
+from django.conf.urls import url
 
-urlpatterns = patterns('dj_elastictranscoder.views',
-    url(r'^endpoint/$', 'endpoint'),
-)
+from . import views
+
+urlpatterns = [
+    url(r'^endpoint/$', views.endpoint),
+]
